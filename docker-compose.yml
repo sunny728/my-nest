@@ -14,6 +14,8 @@ services:
     # 容器崩溃或服务器重启后自动重启（always = 始终重启）
     restart: always
     # 环境变量（从 .env.production 文件读取）
+    env_file:
+      - .env.production
     environment:
       # 数据库超级用户名
       POSTGRES_USER: ${POSTGRES_USER}
