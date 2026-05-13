@@ -36,7 +36,7 @@ services:
       test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
       interval: 10s      # 每 10 秒检查一次
       timeout: 5s        # 超时时间
-      retries: 5         # 失败后重试 5 次
+      retries: 20         # 失败后重试 5 次
 
   # ── NestJS 应用服务 ──────────────────────────────────────
   nestjs:
